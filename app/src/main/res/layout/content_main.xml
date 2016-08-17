@@ -10,10 +10,106 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="main.charansapp.com.autotext.MainActivity"
-    tools:showIn="@layout/activity_main">
+    tools:showIn="@layout/activity_main"
+    android:id="@+id/Backgroud1"
+    android:background="#acf382">
+
+    <AutoCompleteTextView
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/auto"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:hint="Enter Country Name"
+        android:textSize="20dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Country Name"
+        android:id="@+id/textView"
+        android:layout_alignBottom="@+id/auto"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Entered Country Name is"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/auto"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/dest"
+        android:textSize="20dp"
+        android:hint="Country name is"
+        android:layout_below="@+id/textView2"
+        android:layout_alignRight="@+id/auto"
+        android:layout_alignEnd="@+id/auto" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner"
+        android:spinnerMode="dropdown"
+        android:layout_below="@+id/dest"
+        android:layout_toLeftOf="@+id/auto"
+        android:layout_toStartOf="@+id/auto" />
+
+    <ToggleButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/toggleButton2"
+        android:checked="false"
+        android:layout_below="@+id/spinner"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ToggleButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New ToggleButton"
+        android:id="@+id/toggleButton"
+        android:layout_alignTop="@+id/button2"
+        android:layout_alignRight="@+id/dest"
+        android:layout_alignEnd="@+id/dest" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Toggle Button"
+        android:id="@+id/button2"
+        android:layout_below="@+id/spinner"
+        android:layout_centerHorizontal="true" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:id="@+id/progressBar"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:max="100"
+        android:background="#f5d1d1"
+        android:progress="2" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Download Games"
+        android:id="@+id/button"
+        android:layout_below="@+id/progressBar"
+        android:layout_centerHorizontal="true"
+        android:onClick="download" />
+
 </RelativeLayout>
